@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+.firebaserc
+database.rules.json
+firebase.json
+yarn.lock
+assets
+static/style

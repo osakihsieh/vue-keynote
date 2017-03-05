@@ -1,0 +1,65 @@
+@import "reset";
+@import "./share";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $purple;
+  background-image: url(../images/bg.svg);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: 600px auto;
+  background-attachment: fixed;
+}
+
+ol, ul {
+  position: relative;
+  text-align: left;
+  max-width: 660px;
+}
+
+li {
+  margin-bottom: 1.6em;
+  line-height: 1.6em;
+  ol & {
+    list-style-type: decimal;
+  }
+  ul & {
+    list-style-type: disc;
+  }
+  &:last-child {
+    margin-bottom: auto;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+@mixin inline-box {
+  margin: .1em auto;
+  display: inline-block;
+  padding: .2em .8em;
+}
+
+b {
+  @include inline-box;
+  background-color: $yellow;
+  color: $black;
+  font-weight: bold;
+}
+
+pre {
+  position: relative;
+  padding: 1em 1.8em;
+  background-color: rgba($black, .8);
+  font-weight: normal;
+  color: darken($gray, 20);
+  letter-spacing: .1em;
+  ol &,
+  ul & {
+    @include inline-box;
+  }
+}
